@@ -1,0 +1,111 @@
+div#olympic-athletes-container {
+  width: 100%;
+  max-width: 750px;
+  margin: 0px auto;
+}
+
+div#olympic-athletes-container div.other-olympic-profiles {
+  display: inline-block;
+  width: 100%;
+  padding: 25px 0px;
+}
+
+div#olympic-athletes-container div.other-olympic-profiles div.olympic-profile-photo-container {
+  float: left;
+  text-align: center;
+  width: 20%;
+  box-sizing: border-box;
+}
+
+div#olympic-athletes-container div.other-olympic-profiles div.olympic-profile-photo-container div.olympic-profile-photo {
+  height: 65px;
+  width: 65px;
+  background-color: grey;
+  margin: 0px auto;
+  cursor: pointer;
+}
+
+div#olympic-athletes-container div.other-olympic-profiles div.olympic-profile-photo-container div.olympic-profile-photo:hover {
+  opacity: 0.5;
+}
+
+div#olympic-athletes-container div#current-olympic-profile {
+  width: 100%;
+  display: inline-block;
+}
+
+div#olympic-athletes-container div#current-olympic-profile div#olympic-current-left {
+  width: 30%;
+  float: left;
+}
+
+div#olympic-athletes-container div#current-olympic-profile div#olympic-current-left span {
+  width: 100%;
+  margin: 5px 0px;
+  display: block;
+}
+
+div#olympic-athletes-container div#current-olympic-profile div#olympic-current-left div#current-olympic-photo {
+  height: 150px;
+  width: 150px;
+  background-color: grey;
+}
+
+div#olympic-athletes-container div#current-olympic-profile div#olympic-current-left div#current-olympic-metals-container {
+  width: 100%;
+}
+
+div#olympic-athletes-container div#current-olympic-profile div#olympic-current-left div#current-olympic-metals-container div.olympic-metal {
+  width: 25px;
+  height: 25px;
+  background-color: gold;
+  display: inline-block;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+div#olympic-athletes-container div#current-olympic-profile div#olympic-current-left div#current-olympic-metals-container div.olympic-metal:hover {
+  opacity: 0.5;
+}
+
+div#olympic-athletes-container div#current-olympic-profile div#olympic-current-right {
+  width: 70%;
+  float: left;
+}
+
+div#olympic-athletes-container div#current-olympic-profile div#olympic-current-right h1 {
+  margin: 0px 0px 15px 0px;
+  line-height: .85em;
+}
+
+div#olympic-athletes-container div#olympic-events {
+  width: 100%;
+  padding: 25px 0px 0px 0px;
+}
+
+div#olympic-athletes-container div#olympic-events div.olympic-event-date {
+  display: inline-block;
+  background-color: grey;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  color: white;
+}
+
+div#olympic-athletes-container div#olympic-events div.olympic-event-date:hover {
+  opacity: 0.5;
+}
+
+div#olympic-athletes-container div#olympic-events div.olympic-event-date span {
+  display: block;
+  text-align: center;
+}
+
+div#olympic-athletes-container div#olympic-events div.olympic-event-date span.olympic-date-day {
+  font-size: 2em;
+  line-height: .75em;
+}
+
+div#olympic-athletes-container div#olympic-events div.olympic-event-date span.olympic-date-month {
+  margin-top: 3px;
+}
