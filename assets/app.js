@@ -10,8 +10,7 @@
     updateText('profile-about', athlete.about);
     document.getElementById('profile-picture').style.backgroundImage = 'url(' + athlete.photo + ')';
     for (var x = 0; x < 5; x++) {
-      var num = (current + 1) + x;
-      if ((num + 1) > data.athletes.length) num = num - data.athletes.length;
+      var num = ((x + 1) + current) % data.athletes.length;
       var preview = document.getElementsByClassName('profile-preview')[x];
       preview.style.backgroundImage = 'url(' + data.athletes[num].photo + ')';
       preview.setAttribute('data-val', num);
@@ -29,12 +28,12 @@
     document.getElementById(selected.id.replace('-btn', '') + '-section').style.display = 'block';
   }
   function resize() {
+    var height = document.getElementsByClassName('profile-preview')[0].offsetWidth + 'px';;
     for (var x = 0; x < 5; x++) {
-      var height = document.getElementsByClassName('profile-preview')[x].offsetWidth + 'px';
       document.getElementsByClassName('profile-preview')[x].style.height = height;
-      height = document.getElementById('profile-picture').offsetWidth + 'px';
-      document.getElementById('profile-picture').style.height = height;
     }
+    height = document.getElementById('profile-picture').offsetWidth + 'px';
+    document.getElementById('profile-picture').style.height = height;
   }
   for (var x = 0; x < 3; x++) {
     document.getElementsByClassName('menu-item')[x].onclick = function () {
@@ -50,6 +49,6 @@
     }
   }
   window.onresize = resize;
-  loadProfile();
   resize();
+  loadProfile();
 })();
