@@ -1,111 +1,72 @@
-div#olympic-athletes-container {
+html,
+body {
+  margin: 0px;
+  height: 0px; }
+
+div#olympic-container {
+  overflow: hidden;
   width: 100%;
-  max-width: 750px;
-  margin: 0px auto;
-}
+  text-align: left;
+  background-color: #eee;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  div#olympic-container div#left-side {
+    width: 30%;
+    display: inline-block; }
+    div#olympic-container div#left-side div#profile-picture {
+      height: 250px;
+      width: 100%;
+      background-image: url("http://img.bleacherreport.net/img/images/photos/002/725/755/hi-res-182601964-ski-jumper-sarah-hendrickson-poses-for-a-portrait_crop_north.jpg?h=533&w=800&q=70&crop_x=center&crop_y=top");
+      background-size: cover;
+      background-position: center center; }
+    div#olympic-container div#left-side div#menu-container {
+      width: 100%; }
+      div#olympic-container div#left-side div#menu-container div.menu-item {
+        width: 100%;
+        background-color: #ccc;
+        padding: 15px 25px;
+        cursor: pointer;
+        box-sizing: border-box; }
+        div#olympic-container div#left-side div#menu-container div.menu-item i {
+          width: 35px; }
+      div#olympic-container div#left-side div#menu-container div.menu-item:hover {
+        background-color: #bbb; }
+      div#olympic-container div#left-side div#menu-container div.current-menu-item {
+        background-color: #bbb; }
+  div#olympic-container div#right-side {
+    vertical-align: top;
+    width: 69%;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 5px 15px; }
+    div#olympic-container div#right-side div#medals-section,
+    div#olympic-container div#right-side div#events-section {
+      display: none; }
+  div#olympic-container div#profiles-container {
+    width: 100%;
+    white-space: nowrap; }
+    div#olympic-container div#profiles-container div.profile-preview {
+      display: inline-block;
+      width: 20.5%;
+      height: 125px;
+      background-image: url("http://via.placeholder.com/350x350");
+      background-size: cover;
+      background-position: center center;
+      cursor: pointer;
+      margin-left: -4px;
+      margin-bottom: -4px; }
+    div#olympic-container div#profiles-container div.profile-preview:hover {
+      opacity: 0.5; }
 
-div#olympic-athletes-container div.other-olympic-profiles {
-  display: inline-block;
-  width: 100%;
-  padding: 25px 0px;
-}
+@media screen and (max-width: 550px) {
+  div#olympic-container div#left-side,
+  div#olympic-container div#right-side {
+    width: 100%; }
+  div#olympic-container div#right-side {
+    height: 250px; } }
 
-div#olympic-athletes-container div.other-olympic-profiles div.olympic-profile-photo-container {
-  float: left;
-  text-align: center;
-  width: 20%;
-  box-sizing: border-box;
-}
-
-div#olympic-athletes-container div.other-olympic-profiles div.olympic-profile-photo-container div.olympic-profile-photo {
-  height: 65px;
-  width: 65px;
-  background-color: grey;
-  margin: 0px auto;
-  cursor: pointer;
-}
-
-div#olympic-athletes-container div.other-olympic-profiles div.olympic-profile-photo-container div.olympic-profile-photo:hover {
-  opacity: 0.5;
-}
-
-div#olympic-athletes-container div#current-olympic-profile {
-  width: 100%;
-  display: inline-block;
-}
-
-div#olympic-athletes-container div#current-olympic-profile div#olympic-current-left {
-  width: 30%;
-  float: left;
-}
-
-div#olympic-athletes-container div#current-olympic-profile div#olympic-current-left span {
-  width: 100%;
-  margin: 5px 0px;
-  display: block;
-}
-
-div#olympic-athletes-container div#current-olympic-profile div#olympic-current-left div#current-olympic-photo {
-  height: 150px;
-  width: 150px;
-  background-color: grey;
-}
-
-div#olympic-athletes-container div#current-olympic-profile div#olympic-current-left div#current-olympic-metals-container {
-  width: 100%;
-}
-
-div#olympic-athletes-container div#current-olympic-profile div#olympic-current-left div#current-olympic-metals-container div.olympic-metal {
-  width: 25px;
-  height: 25px;
-  background-color: gold;
-  display: inline-block;
-  border-radius: 100%;
-  cursor: pointer;
-}
-
-div#olympic-athletes-container div#current-olympic-profile div#olympic-current-left div#current-olympic-metals-container div.olympic-metal:hover {
-  opacity: 0.5;
-}
-
-div#olympic-athletes-container div#current-olympic-profile div#olympic-current-right {
-  width: 70%;
-  float: left;
-}
-
-div#olympic-athletes-container div#current-olympic-profile div#olympic-current-right h1 {
-  margin: 0px 0px 15px 0px;
-  line-height: .85em;
-}
-
-div#olympic-athletes-container div#olympic-events {
-  width: 100%;
-  padding: 25px 0px 0px 0px;
-}
-
-div#olympic-athletes-container div#olympic-events div.olympic-event-date {
-  display: inline-block;
-  background-color: grey;
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-  color: white;
-}
-
-div#olympic-athletes-container div#olympic-events div.olympic-event-date:hover {
-  opacity: 0.5;
-}
-
-div#olympic-athletes-container div#olympic-events div.olympic-event-date span {
-  display: block;
-  text-align: center;
-}
-
-div#olympic-athletes-container div#olympic-events div.olympic-event-date span.olympic-date-day {
-  font-size: 2em;
-  line-height: .75em;
-}
-
-div#olympic-athletes-container div#olympic-events div.olympic-event-date span.olympic-date-month {
-  margin-top: 3px;
-}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,90 @@
+html,
+body {
+  margin: 0px;
+  height: 0px;
+}
+
+// main container
+div#olympic-container {
+  overflow: hidden;
+  width: 100%;
+  text-align: left;
+  background-color: #eee;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; // left side 
+  div#left-side {
+    width: 30%;
+    display: inline-block;
+    div#profile-picture {
+      height: 250px;
+      width: 100%;
+      background-image: url('http://img.bleacherreport.net/img/images/photos/002/725/755/hi-res-182601964-ski-jumper-sarah-hendrickson-poses-for-a-portrait_crop_north.jpg?h=533&w=800&q=70&crop_x=center&crop_y=top');
+      background-size: cover;
+      background-position: center center;
+    }
+    div#menu-container {
+      width: 100%;
+      div.menu-item {
+        width: 100%;
+        background-color: #ccc;
+        padding: 15px 25px;
+        cursor: pointer;
+        box-sizing: border-box;
+        i {
+          width: 35px;
+        }
+      }
+      div.menu-item:hover {
+        background-color: #bbb;
+      }
+      div.current-menu-item {
+        background-color: #bbb;
+      }
+    }
+  } // right side
+  div#right-side {
+    vertical-align: top;
+    width: 69%;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 5px 15px;
+    div#medals-section,
+    div#events-section {
+      display: none;
+    }
+  } // profiles
+  div#profiles-container {
+    width: 100%;
+    white-space: nowrap;
+    div.profile-preview {
+      display: inline-block;
+      width: 20.5%;
+      height: 125px;
+      background-image: url('http://via.placeholder.com/350x350');
+      background-size: cover;
+      background-position: center center;
+      cursor: pointer;
+      margin-left: -4px;
+      margin-bottom: -4px;
+    }
+    div.profile-preview:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  div#olympic-container {
+    div#left-side,
+    div#right-side {
+      width: 100%;
+    }
+    div#right-side {
+      height: 250px
+    }
+  }
+}

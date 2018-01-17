@@ -1,71 +1,45 @@
+<link rel="stylesheet" href="https://www.deseretnews.com/v4/dist/app.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="assets/style.css">
-<div id="olympic-athletes-container">
-  <!-- other profiles -->
-  <div class="other-olympic-profiles">
-    <div class="olympic-profile-photo-container">
-      <div class="olympic-profile-photo"></div>
-    </div>
-    <div class="olympic-profile-photo-container">
-      <div class="olympic-profile-photo"></div>
-    </div>
-    <div class="olympic-profile-photo-container">
-      <div class="olympic-profile-photo"></div>
-    </div>
-    <div class="olympic-profile-photo-container">
-      <div class="olympic-profile-photo"></div>
-    </div>
-    <div class="olympic-profile-photo-container">
-      <div class="olympic-profile-photo"></div>
-    </div>
-  </div>
-  <!-- current profile -->
-  <div id="current-olympic-profile">
-    <div id="olympic-current-left">
-      <div id="current-olympic-photo"></div>
-      <span id="current-olympic-town">Curabitur</span>
-      <span id="current-olympic-town">Vestibulum</span>
-      <div id="current-olympic-metals-container">
-        <div class="olympic-metal"></div>
-        <div class="olympic-metal"></div>
-        <div class="olympic-metal"></div>
+
+<div id="olympic-container">
+  <div id="left-side">
+    <div id="profile-picture"></div>
+    <div id="menu-container">
+      <div class="menu-item current-menu-item" id="about-btn">
+        <i class="fa fa-user" aria-hidden="true"></i>
+        About
+      </div>
+      <div class="menu-item" id="medals-btn">
+        <i class="fa fa-trophy" aria-hidden="true"></i>
+        Medals
+      </div>
+      <div class="menu-item" id="events-btn">
+        <i class="fa fa-calendar" aria-hidden="true"></i>
+        Events
       </div>
     </div>
-    <div id="olympic-current-right">
-      <h1 id="current-olympic-name">Curac Donec</h1>
-      <p id="current-olympic-desc">
-        Donec sollicitudin molestie malesuada. Cras ultricies ligula sed magna dictum porta. Vivamus suscipit tortor eget felis porttitor
-        volutpat. Cras ultricies ligula sed magna dictum porta. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-        posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vivamus suscipit
-        tortor eget felis porttitor volutpat. Donec rutrum congue leo eget malesuada. Curabitur arcu erat, accumsan id imperdiet
-        et, porttitor at sem.
-        <br />
-        <br />
-        <a href="#">Read More</a>
-      </p>
+  </div>
+  <div id="right-side">
+    <div id="about-section">
+      <h1 id="profile-name">Jane Doe</h1>
+      <p id="profile-about">The most decorated athlete of all at Rio 2016, where he won five golds and a silver, Phelps suffered attention deﬁcit/hyperactivity
+        ­disorder as a child and was encouraged to take up swimming at the age of seven to control his energy. Over the years
+        he developed into a champion swimmer, beating record after record in every age category in which he competed.</p>
+    </div><div id="medals-section">
+      <h1>Medals</h1>
+    </div><div id="events-section">
+      <h1>Events</h1>
     </div>
   </div>
-  <!-- profile events -->
-  <div id="olympic-events">
-    <div class="olympic-event-date">
-      <span class="olympic-date-month">FEB</span>
-      <span class="olympic-date-day">31</span>
-    </div>
-    <div class="olympic-event-date">
-      <span class="olympic-date-month">FEB</span>
-      <span class="olympic-date-day">31</span>
-    </div>
-    <div class="olympic-event-date">
-      <span class="olympic-date-month">FEB</span>
-      <span class="olympic-date-day">31</span>
-    </div>
-    <div class="olympic-event-date">
-      <span class="olympic-date-month">FEB</span>
-      <span class="olympic-date-day">31</span>
-    </div>
+  <div id="profiles-container">
+    <div data-val="1" class="profile-preview"></div>
+    <div data-val="2" class="profile-preview"></div>
+    <div data-val="3" class="profile-preview"></div>
+    <div data-val="4" class="profile-preview"></div>
+    <div data-val="5" class="profile-preview"></div>
   </div>
-  <p id="olympic-event-desc">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet
-    aliquam vel, ullamcorper sit amet ligula. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Nulla
-    porttitor accumsan tincidunt. Donec rutrum congue leo eget malesuada.
-  </p>
 </div>
+
+<script src="assets/data.js"></script>
 <script src="assets/app.js"></script>
