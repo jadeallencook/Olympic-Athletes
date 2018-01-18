@@ -5,6 +5,19 @@
     var elem = document.getElementById(id);
     elem.innerText = text;
   }
+  function loadEvents() {
+    var container = document.getElementById('events-container');
+    container.innerHTML = '';
+    for (var x = 1; x <= 5; x++) {
+      var event = athlete['event-' + x];
+      if (event) {
+        if (data.events[event]) {
+          event = data.events[event];
+          container.innerHTML += event;
+        }
+      }
+    }
+  }
   function loadProfile() {
     updateText('profile-name', athlete.name);
     updateText('profile-about', athlete.about);
@@ -15,6 +28,7 @@
       preview.style.backgroundImage = 'url(' + data.athletes[num].photo + ')';
       preview.setAttribute('data-val', num);
     }
+    loadEvents();
   }
   function router(selected) {
     var sections = ['about', 'medals', 'events'];

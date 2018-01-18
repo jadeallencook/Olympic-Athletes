@@ -11,7 +11,7 @@ var data = {
     "medal-3": "",
     "medal-4": "",
     "medal-5": "",
-    "event-1": 10118,
+    "event-1": "010118",
     "event-2": "",
     "event-3": "",
     "event-4": "",
@@ -28,7 +28,7 @@ var data = {
     "medal-3": "",
     "medal-4": "",
     "medal-5": "",
-    "event-1": 10118,
+    "event-1": "010218",
     "event-2": "",
     "event-3": "",
     "event-4": "",
@@ -45,7 +45,7 @@ var data = {
     "medal-3": "",
     "medal-4": "",
     "medal-5": "",
-    "event-1": 10118,
+    "event-1": "010318",
     "event-2": "",
     "event-3": "",
     "event-4": "",
@@ -62,15 +62,13 @@ var data = {
     "medal-3": "",
     "medal-4": "",
     "medal-5": "",
-    "event-1": 10118,
+    "event-1": "010118",
     "event-2": "",
     "event-3": "",
     "event-4": "",
     "event-5": ""
   }],
   events: {
-    '010118': {
-      title: 'Jumping Competition'
-    }
+    "010118": "Event Title: About this event."
   }
 }

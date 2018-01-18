@@ -77,14 +77,24 @@ div#olympic-container {
   }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 1000px) {
   div#olympic-container {
     div#left-side,
     div#right-side {
       width: 100%;
     }
     div#right-side {
-      height: 250px
+      padding-bottom: 50px;
+      div {
+        h1 {
+          margin-top: 25px;
+        }
+      }
+    }
+    div#profiles-container {
+      div.profile-preview:hover {
+        opacity: 1;
+      }
     }
   }
 }
