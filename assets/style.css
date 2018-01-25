@@ -4,10 +4,12 @@ body {
   height: 0px; }
 
 div#olympic-container {
-  overflow: hidden;
+  overflow-y: scroll;
+  overflow-x: hidden;
   width: 100%;
   text-align: left;
   background-color: #eee;
+  margin: 25px 0px;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -20,7 +22,7 @@ div#olympic-container {
     div#olympic-container div#left-side div#profile-picture {
       height: 250px;
       width: 100%;
-      background-image: url("http://img.bleacherreport.net/img/images/photos/002/725/755/hi-res-182601964-ski-jumper-sarah-hendrickson-poses-for-a-portrait_crop_north.jpg?h=533&w=800&q=70&crop_x=center&crop_y=top");
+      background-image: url("http://via.placeholder.com/350x350");
       background-size: cover;
       background-position: center center; }
     div#olympic-container div#left-side div#menu-container {
@@ -42,7 +44,38 @@ div#olympic-container {
     width: 69%;
     display: inline-block;
     box-sizing: border-box;
-    padding: 5px 15px; }
+    padding: 15px; }
+    div#olympic-container div#right-side div#about-section h1,
+    div#olympic-container div#right-side div#medals-section h1,
+    div#olympic-container div#right-side div#events-section h1 {
+      font-size: 2em;
+      line-height: 1em; }
+    div#olympic-container div#right-side div#events-section div#events-container div.olympic-date {
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      text-align: center;
+      background-color: #bbb;
+      cursor: pointer;
+      margin-right: 15px;
+      margin-bottom: 15px; }
+      div#olympic-container div#right-side div#events-section div#events-container div.olympic-date span.month {
+        display: block;
+        margin-top: 15px; }
+      div#olympic-container div#right-side div#events-section div#events-container div.olympic-date span.date {
+        font-size: 2em;
+        font-weight: bold; }
+    div#olympic-container div#right-side div#events-section div#events-container div.olympic-date:hover {
+      opacity: 0.5; }
+    div#olympic-container div#right-side div#about-section h1 {
+      margin: 0px; }
+    div#olympic-container div#right-side div#about-section p#profile-hometown {
+      font-style: italic; }
+    div#olympic-container div#right-side div#about-section p {
+      margin-bottom: 15px; }
+    div#olympic-container div#right-side div#about-section a#profile-read-more {
+      color: cadetblue;
+      margin-top: 15px; }
     div#olympic-container div#right-side div#medals-section,
     div#olympic-container div#right-side div#events-section {
       display: none; }
@@ -62,14 +95,36 @@ div#olympic-container {
     div#olympic-container div#profiles-container div.profile-preview:hover {
       opacity: 0.5; }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-device-width: 500px), screen and (max-width: 550px) {
   div#olympic-container div#left-side,
   div#olympic-container div#right-side {
     width: 100%; }
+  div#olympic-container div#left-side div#menu-container {
+    white-space: nowrap; }
+    div#olympic-container div#left-side div#menu-container div.menu-item {
+      font-size: 1em;
+      width: 33%;
+      display: inline-block;
+      text-align: center; }
+      div#olympic-container div#left-side div#menu-container div.menu-item i {
+        margin: 0px auto;
+        display: block; }
   div#olympic-container div#right-side {
     padding-bottom: 50px; }
-    div#olympic-container div#right-side div h1 {
-      margin-top: 25px; }
+    div#olympic-container div#right-side div#about-section,
+    div#olympic-container div#right-side div#medals-section,
+    div#olympic-container div#right-side div#events-section {
+      font-size: 1em;
+      box-sizing: border-box; }
+      div#olympic-container div#right-side div#about-section h1,
+      div#olympic-container div#right-side div#medals-section h1,
+      div#olympic-container div#right-side div#events-section h1 {
+        margin-top: 25px; }
+    div#olympic-container div#right-side div#events-section div#events-container div.olympic-date {
+      width: 75px;
+      height: 75px; }
+      div#olympic-container div#right-side div#events-section div#events-container div.olympic-date span.month {
+        margin-top: 2px; }
   div#olympic-container div#profiles-container div.profile-preview:hover {
     opacity: 1; } }
 

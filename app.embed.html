@@ -1,0 +1,330 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+div#olympic-container {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 100%;
+  text-align: left;
+  background-color: #eee;
+  margin: 25px 0px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  div#olympic-container div#left-side {
+    width: 30%;
+    display: inline-block; }
+    div#olympic-container div#left-side div#profile-picture {
+      height: 250px;
+      width: 100%;
+      background-image: url("http://via.placeholder.com/350x350");
+      background-size: cover;
+      background-position: center center; }
+    div#olympic-container div#left-side div#menu-container {
+      width: 100%; }
+      div#olympic-container div#left-side div#menu-container div.menu-item {
+        width: 100%;
+        background-color: #ccc;
+        padding: 15px 25px;
+        cursor: pointer;
+        box-sizing: border-box; }
+        div#olympic-container div#left-side div#menu-container div.menu-item i {
+          width: 35px; }
+      div#olympic-container div#left-side div#menu-container div.menu-item:hover {
+        background-color: #bbb; }
+      div#olympic-container div#left-side div#menu-container div.current-menu-item {
+        background-color: #bbb; }
+  div#olympic-container div#right-side {
+    vertical-align: top;
+    width: 69%;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 15px; }
+    div#olympic-container div#right-side div#about-section h1,
+    div#olympic-container div#right-side div#medals-section h1,
+    div#olympic-container div#right-side div#events-section h1 {
+      font-size: 2em;
+      line-height: 1em; }
+    div#olympic-container div#right-side div#events-section div#events-container div.olympic-date {
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      text-align: center;
+      background-color: #bbb;
+      cursor: pointer;
+      margin-right: 15px;
+      margin-bottom: 15px; }
+      div#olympic-container div#right-side div#events-section div#events-container div.olympic-date span.month {
+        display: block;
+        margin-top: 15px; }
+      div#olympic-container div#right-side div#events-section div#events-container div.olympic-date span.date {
+        font-size: 2em;
+        font-weight: bold; }
+    div#olympic-container div#right-side div#events-section div#events-container div.olympic-date:hover {
+      opacity: 0.5; }
+    div#olympic-container div#right-side div#about-section h1 {
+      margin: 0px; }
+    div#olympic-container div#right-side div#about-section p#profile-hometown {
+      font-style: italic; }
+    div#olympic-container div#right-side div#about-section p {
+      margin-bottom: 15px; }
+    div#olympic-container div#right-side div#about-section a#profile-read-more {
+      color: cadetblue;
+      margin-top: 15px; }
+    div#olympic-container div#right-side div#medals-section,
+    div#olympic-container div#right-side div#events-section {
+      display: none; }
+  div#olympic-container div#profiles-container {
+    width: 100%;
+    white-space: nowrap; }
+    div#olympic-container div#profiles-container div.profile-preview {
+      display: inline-block;
+      width: 20.5%;
+      height: 125px;
+      background-image: url("http://via.placeholder.com/350x350");
+      background-size: cover;
+      background-position: center center;
+      cursor: pointer;
+      margin-left: -4px;
+      margin-bottom: -4px; }
+    div#olympic-container div#profiles-container div.profile-preview:hover {
+      opacity: 0.5; }
+
+@media screen and (max-device-width: 500px), screen and (max-width: 550px) {
+  div#olympic-container div#left-side,
+  div#olympic-container div#right-side {
+    width: 100%; }
+  div#olympic-container div#left-side div#menu-container {
+    white-space: nowrap; }
+    div#olympic-container div#left-side div#menu-container div.menu-item {
+      font-size: 1em;
+      width: 33%;
+      display: inline-block;
+      text-align: center; }
+      div#olympic-container div#left-side div#menu-container div.menu-item i {
+        margin: 0px auto;
+        display: block; }
+  div#olympic-container div#right-side {
+    padding-bottom: 50px; }
+    div#olympic-container div#right-side div#about-section,
+    div#olympic-container div#right-side div#medals-section,
+    div#olympic-container div#right-side div#events-section {
+      font-size: 1em;
+      box-sizing: border-box; }
+      div#olympic-container div#right-side div#about-section h1,
+      div#olympic-container div#right-side div#medals-section h1,
+      div#olympic-container div#right-side div#events-section h1 {
+        margin-top: 25px; }
+    div#olympic-container div#right-side div#events-section div#events-container div.olympic-date {
+      width: 75px;
+      height: 75px; }
+      div#olympic-container div#right-side div#events-section div#events-container div.olympic-date span.month {
+        margin-top: 2px; }
+  div#olympic-container div#profiles-container div.profile-preview:hover {
+    opacity: 1; } }
+</style>
+
+<div id="olympic-container">
+    <div id="left-side">
+      <div id="profile-picture"></div>
+      <div id="menu-container">
+        <div class="menu-item current-menu-item" id="about-btn">
+          <i class="fa fa-user" aria-hidden="true"></i>
+          About
+        </div>
+        <div class="menu-item" id="medals-btn">
+          <i class="fa fa-trophy" aria-hidden="true"></i>
+          Medals
+        </div>
+        <div class="menu-item" id="events-btn">
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+          Events
+        </div>
+      </div>
+    </div>
+    <div id="right-side">
+      <div id="about-section">
+        <h1 id="profile-name"></h1>
+        <p id="profile-hometown">loading..</p>
+        <p id="profile-about">loading...</p>
+        <a href="#" target="_blank" id="profile-read-more">(Read More)</a>
+      </div><div id="medals-section">
+        <h1>Medals</h1>
+        <div id="medals-container"></div>
+      </div><div id="events-section">
+        <h1>Events</h1>
+        <div id="events-container"></div>
+        <span id="event-info">Click an event to see info!</span>
+      </div>
+    </div>
+    <div id="profiles-container">
+      <div data-val="1" class="profile-preview"></div>
+      <div data-val="2" class="profile-preview"></div>
+      <div data-val="3" class="profile-preview"></div>
+      <div data-val="4" class="profile-preview"></div>
+      <div data-val="5" class="profile-preview"></div>
+    </div>
+  </div>
+
+<script>
+  (function () {
+    var data = {
+  athletes: [{
+    "name": "John Doe",
+    "photo": "https://randomuser.me/api/portraits/men/1.jpg",
+    "age": 22,
+    "hometown": "Salt Lake City",
+    "about": "This guy is one of the highest jumpers and fastest runners!",
+    "link": "#",
+    "medal-1": "Highest Jumper: This guy is one of the highest jumpers!",
+    "medal-2": "",
+    "medal-3": "",
+    "medal-4": "",
+    "medal-5": "",
+    "event-1": 10118,
+    "event-2": "",
+    "event-3": "",
+    "event-4": "",
+    "event-5": ""
+  }, {
+    "name": "Jane Doe",
+    "photo": "https://randomuser.me/api/portraits/women/2.jpg",
+    "age": 23,
+    "hometown": "Heber",
+    "about": "Really good at swimming and running long distances.",
+    "link": "#",
+    "medal-1": "Longest Run: She ran over 100 miles in one race!",
+    "medal-2": "Fast Swimmer: Swam 10 laps in under 20 seconds.",
+    "medal-3": "",
+    "medal-4": "",
+    "medal-5": "",
+    "event-1": 10118,
+    "event-2": 10218,
+    "event-3": "",
+    "event-4": "",
+    "event-5": ""
+  }, {
+    "name": "Bob Jones",
+    "photo": "https://randomuser.me/api/portraits/men/4.jpg",
+    "age": 23,
+    "hometown": "Heber",
+    "about": "Really good at swimming and running long distances.",
+    "link": "#",
+    "medal-1": "Longest Run: She ran over 100 miles in one race!",
+    "medal-2": "Fast Swimmer: Swam 10 laps in under 20 seconds.",
+    "medal-3": "",
+    "medal-4": "",
+    "medal-5": "",
+    "event-1": 10118,
+    "event-2": 10218,
+    "event-3": "",
+    "event-4": "",
+    "event-5": ""
+  }],
+  events: {
+    "10118": "(1/1/18) Race: Everybody races 10 laps.",
+    "10218": "(1/2/18) Swimming: Swim a total of 20 laps."
+  }
+}
+  var current = 0;
+  var athlete = data.athletes[current];
+  var eventNum = 5;
+  var medalsNum = 5;
+  function updateText(id, text) {
+    var elem = document.getElementById(id);
+    elem.innerHTML = text;
+  }
+  function loadEvents() {
+    var container = document.getElementById('events-container');
+    container.innerHTML = '';
+    for (var x = 1; x <= eventNum; x++) {
+      var event = athlete['event-' + x];
+      if (event) {
+        if (data.events[event]) {
+          event = data.events[event];
+          var date = event.match(/\((.*?)\)/);
+          date = date[0].replace('(', '').replace(')', '');
+          date = new Date(date);
+          var month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'][date.getMonth()];
+          event = event.replace(/\((.*?)\)/, '');
+          container.innerHTML += '<div class="olympic-date" data-desc="' + event + '" id="event-' + x + '"><span class="month">' + month + '</span><span class="date">' + date.getDate() + '</span></div>';
+        }
+      }
+    }
+    for (var x = 1; x <= 5; x++) {
+      var container = document.getElementById('event-' + x);
+      if (container) {
+        container.onclick = function() {
+          var event = this.getAttribute('data-desc');
+          event = '<b>' + event.replace(':', ' - </b> ')
+          document.getElementById('event-info').innerHTML = event;
+        }
+      }
+    }
+  }
+  function loadMedals() {
+    var container = document.getElementById('medals-container');
+    container.innerHTML = '';
+    for (var x = 1; x <= 5; x++) {
+      var medal = athlete['medal-' + x];
+      if (medal) {
+        medal = '<b>' + medal.replace(':', ' - </b>');
+        container.innerHTML += medal + '<br />';
+      }
+    }
+  }
+  function loadProfile() {
+    updateText('profile-name', athlete.name);
+    updateText('profile-about', athlete.about);
+    updateText('profile-hometown', athlete.hometown + ', UT');
+    document.getElementById('event-info').innerHTML = 'Click an event to see info!';
+    document.getElementById('profile-read-more').setAttribute('href', athlete.link);
+    document.getElementById('profile-picture').style.backgroundImage = 'url(' + athlete.photo + ')';
+    for (var x = 0; x < 5; x++) {
+      var num = ((x + 1) + current) % data.athletes.length;
+      var preview = document.getElementsByClassName('profile-preview')[x];
+      preview.style.backgroundImage = 'url(' + data.athletes[num].photo + ')';
+      preview.setAttribute('data-val', num);
+    }
+    loadEvents();
+    loadMedals();
+  }
+  function router(selected) {
+    var sections = ['about', 'medals', 'events'];
+    for (var x = 0, max = sections.length; x < max; x++) {
+      var button = document.getElementById(sections[x] + '-btn');
+      var section = document.getElementById(sections[x] + '-section');
+      button.classList.remove('current-menu-item');
+      section.style.display = 'none';
+    }
+    selected.classList.add('current-menu-item');
+    document.getElementById(selected.id.replace('-btn', '') + '-section').style.display = 'block';
+  }
+  function resize() {
+    var height = document.getElementsByClassName('profile-preview')[0].offsetWidth + 'px';;
+    for (var x = 0; x < 5; x++) {
+      document.getElementsByClassName('profile-preview')[x].style.height = height;
+    }
+    height = document.getElementById('profile-picture').offsetWidth + 'px';
+    document.getElementById('profile-picture').style.height = height;
+  }
+  for (var x = 0; x < 3; x++) {
+    document.getElementsByClassName('menu-item')[x].onclick = function () {
+      router(this);
+    }
+  }
+  for (var x = 0; x < 5; x++) {
+    document.getElementsByClassName('profile-preview')[x].onclick = function() {
+      var num = parseInt(this.getAttribute('data-val'));
+      current = num;
+      athlete = data.athletes[num];
+      loadProfile();
+    }
+  }
+  window.onresize = resize;
+  resize();
+  loadProfile();
+})();
+</script>
