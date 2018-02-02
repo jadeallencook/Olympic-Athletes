@@ -24,34 +24,59 @@
         }
       }
     }
-    for (var x = 1; x <= 5; x++) {
-      var container = document.getElementById('event-' + x);
-      if (container) {
-        container.onclick = function() {
-          var event = this.getAttribute('data-desc');
-          event = '<b>' + event.replace(':', ' - </b> ')
-          document.getElementById('event-info').innerHTML = event;
+    if (athlete['event-1']) {
+      for (var x = 1; x <= 5; x++) {
+        var container = document.getElementById('event-' + x);
+        if (container) {
+          container.onclick = function() {
+            var event = this.getAttribute('data-desc');
+            event = '<b>' + event.replace(':', ' - </b> ')
+            document.getElementById('event-info').innerHTML = event;
+          }
         }
       }
+    } else {
+      document.getElementById('event-info').innerHTML = 'No events have been scheduled!';
     }
   }
   function loadMedals() {
     var container = document.getElementById('medals-container');
     container.innerHTML = '';
-    for (var x = 1; x <= 5; x++) {
-      var medal = athlete['medal-' + x];
-      if (medal) {
-        medal = '<b>' + medal.replace(':', ' - </b>');
-        container.innerHTML += medal + '<br />';
+    if (athlete['medal-1']) {
+      for (var x = 1; x <= 5; x++) {
+        var medal = athlete['medal-' + x];
+        if (medal) {
+          medal = '<b>' + medal.replace(':', ' - </b>');
+          container.innerHTML += medal + '<br />';
+        }
       }
+    } else {
+      container.innerHTML += 'No medals were found!';
     }
+  }
+  function loadLinks() {
+    var container = document.getElementById('links-container');
+    container.innerHTML = '';
+    if (athlete['link-1']) {
+      container.innerHTML += '<b>Read More:</b></br />';
+      for (var x = 1; x <= 5; x++) {
+        var link = athlete['link-' + x];
+        var title = athlete['link-' + x + '-title'];
+        if(title.length > 45) {
+          title = title.substring(0, 45);
+          title += '...';
+        }
+        if (link) {
+          container.innerHTML += '<a href="' + link + '">' + title +'</a><br />';
+        }
+      }
+    };
   }
   function loadProfile() {
     updateText('profile-name', athlete.name);
     updateText('profile-about', athlete.about);
-    updateText('profile-hometown', athlete.hometown + ', UT');
+    updateText('profile-hometown', athlete.hometown + ', UT (Age: ' + athlete.age + ')');
     document.getElementById('event-info').innerHTML = 'Click an event to see info!';
-    document.getElementById('profile-read-more').setAttribute('href', athlete.link);
     document.getElementById('profile-picture').style.backgroundImage = 'url(' + athlete.photo + ')';
     for (var x = 0; x < 5; x++) {
       var num = ((x + 1) + current) % data.athletes.length;
@@ -59,6 +84,7 @@
       preview.style.backgroundImage = 'url(' + data.athletes[num].photo + ')';
       preview.setAttribute('data-val', num);
     }
+    loadLinks();
     loadEvents();
     loadMedals();
   }

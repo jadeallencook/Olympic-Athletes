@@ -76,6 +76,10 @@ div#olympic-container {
     div#olympic-container div#right-side div#about-section a#profile-read-more {
       color: cadetblue;
       margin-top: 15px; }
+    div#olympic-container div#right-side div#about-section div#links-container a:link {
+      color: #46b9ff; }
+    div#olympic-container div#right-side div#about-section div#links-container a:hover {
+      text-decoration: underline; }
     div#olympic-container div#right-side div#medals-section,
     div#olympic-container div#right-side div#events-section {
       display: none; }
@@ -102,7 +106,7 @@ div#olympic-container {
   div#olympic-container div#left-side div#menu-container {
     white-space: nowrap; }
     div#olympic-container div#left-side div#menu-container div.menu-item {
-      font-size: 1em;
+      font-size: 2em;
       width: 33%;
       display: inline-block;
       text-align: center; }
@@ -114,7 +118,7 @@ div#olympic-container {
     div#olympic-container div#right-side div#about-section,
     div#olympic-container div#right-side div#medals-section,
     div#olympic-container div#right-side div#events-section {
-      font-size: 1em;
+      font-size: 2em;
       box-sizing: border-box; }
       div#olympic-container div#right-side div#about-section h1,
       div#olympic-container div#right-side div#medals-section h1,
