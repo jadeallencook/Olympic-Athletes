@@ -106,7 +106,7 @@ div#olympic-container {
   div#olympic-container div#left-side div#menu-container {
     white-space: nowrap; }
     div#olympic-container div#left-side div#menu-container div.menu-item {
-      font-size: 2em;
+      font-size: 1em;
       width: 33%;
       display: inline-block;
       text-align: center; }
@@ -118,7 +118,7 @@ div#olympic-container {
     div#olympic-container div#right-side div#about-section,
     div#olympic-container div#right-side div#medals-section,
     div#olympic-container div#right-side div#events-section {
-      font-size: 2em;
+      font-size: 1em;
       box-sizing: border-box; }
       div#olympic-container div#right-side div#about-section h1,
       div#olympic-container div#right-side div#medals-section h1,

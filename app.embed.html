@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <style>
   div#olympic-container {
     overflow-y: scroll;
@@ -12,124 +13,184 @@
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none; }
-    div#olympic-container div#left-side {
-      width: 30%;
-      display: inline-block; }
-      div#olympic-container div#left-side div#profile-picture {
-        height: 250px;
-        width: 100%;
-        background-image: url("http://via.placeholder.com/350x350");
-        background-size: cover;
-        background-position: center center; }
-      div#olympic-container div#left-side div#menu-container {
-        width: 100%; }
-        div#olympic-container div#left-side div#menu-container div.menu-item {
-          width: 100%;
-          background-color: #ccc;
-          padding: 15px 25px;
-          cursor: pointer;
-          box-sizing: border-box; }
-          div#olympic-container div#left-side div#menu-container div.menu-item i {
-            width: 35px; }
-        div#olympic-container div#left-side div#menu-container div.menu-item:hover {
-          background-color: #bbb; }
-        div#olympic-container div#left-side div#menu-container div.current-menu-item {
-          background-color: #bbb; }
-    div#olympic-container div#right-side {
-      vertical-align: top;
-      width: 69%;
-      display: inline-block;
-      box-sizing: border-box;
-      padding: 15px; }
-      div#olympic-container div#right-side div#about-section h1,
-      div#olympic-container div#right-side div#medals-section h1,
-      div#olympic-container div#right-side div#events-section h1 {
-        font-size: 2em;
-        line-height: 1em; }
-      div#olympic-container div#right-side div#events-section div#events-container div.olympic-date {
-        display: inline-block;
-        width: 100px;
-        height: 100px;
-        text-align: center;
-        background-color: #bbb;
-        cursor: pointer;
-        margin-right: 15px;
-        margin-bottom: 15px; }
-        div#olympic-container div#right-side div#events-section div#events-container div.olympic-date span.month {
-          display: block;
-          margin-top: 15px; }
-        div#olympic-container div#right-side div#events-section div#events-container div.olympic-date span.date {
-          font-size: 2em;
-          font-weight: bold; }
-      div#olympic-container div#right-side div#events-section div#events-container div.olympic-date:hover {
-        opacity: 0.5; }
-      div#olympic-container div#right-side div#about-section h1 {
-        margin: 0px; }
-      div#olympic-container div#right-side div#about-section p#profile-hometown {
-        font-style: italic; }
-      div#olympic-container div#right-side div#about-section p {
-        line-height: 1em;
-        margin-bottom: 15px; }
-      div#olympic-container div#right-side div#about-section a#profile-read-more {
-        color: cadetblue;
-        margin-top: 15px; }
-      div#olympic-container div#right-side div#about-section div#links-container a:link {
-        color: #46b9ff; }
-      div#olympic-container div#right-side div#about-section div#links-container a:hover {
-        text-decoration: underline; }
-      div#olympic-container div#right-side div#medals-section,
-      div#olympic-container div#right-side div#events-section {
-        display: none; }
-    div#olympic-container div#profiles-container {
-      width: 100%;
-      white-space: nowrap; }
-      div#olympic-container div#profiles-container div.profile-preview {
-        display: inline-block;
-        width: 20.5%;
-        height: 125px;
-        background-image: url("http://via.placeholder.com/350x350");
-        background-size: cover;
-        background-position: center center;
-        cursor: pointer;
-        margin-left: -4px;
-        margin-bottom: -4px; }
-      div#olympic-container div#profiles-container div.profile-preview:hover {
-        opacity: 0.5; }
-  
-  @media screen and (max-device-width: 500px), screen and (max-width: 550px) {
+    user-select: none;
+  }
+
+  div#olympic-container div#left-side {
+    width: 30%;
+    display: inline-block;
+  }
+
+  div#olympic-container div#left-side div#profile-picture {
+    height: 250px;
+    width: 100%;
+    background-image: url("http://via.placeholder.com/350x350");
+    background-size: cover;
+    background-position: center center;
+  }
+
+  div#olympic-container div#left-side div#menu-container {
+    width: 100%;
+  }
+
+  div#olympic-container div#left-side div#menu-container div.menu-item {
+    width: 100%;
+    background-color: #ccc;
+    padding: 15px 25px;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+
+  div#olympic-container div#left-side div#menu-container div.menu-item i {
+    width: 35px;
+  }
+
+  div#olympic-container div#left-side div#menu-container div.menu-item:hover {
+    background-color: #bbb;
+  }
+
+  div#olympic-container div#left-side div#menu-container div.current-menu-item {
+    background-color: #bbb;
+  }
+
+  div#olympic-container div#right-side {
+    vertical-align: top;
+    width: 69%;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 15px;
+  }
+
+  div#olympic-container div#right-side div#about-section h1,
+  div#olympic-container div#right-side div#medals-section h1,
+  div#olympic-container div#right-side div#events-section h1 {
+    font-size: 2em;
+    line-height: 1em;
+  }
+
+  div#olympic-container div#right-side div#events-section div#events-container div.olympic-date {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    background-color: #bbb;
+    cursor: pointer;
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
+
+  div#olympic-container div#right-side div#events-section div#events-container div.olympic-date span.month {
+    display: block;
+    margin-top: 15px;
+  }
+
+  div#olympic-container div#right-side div#events-section div#events-container div.olympic-date span.date {
+    font-size: 2em;
+    font-weight: bold;
+  }
+
+  div#olympic-container div#right-side div#events-section div#events-container div.olympic-date:hover {
+    opacity: 0.5;
+  }
+
+  div#olympic-container div#right-side div#about-section h1 {
+    margin: 0px;
+  }
+
+  div#olympic-container div#right-side div#about-section p#profile-hometown {
+    font-style: italic;
+  }
+
+  div#olympic-container div#right-side div#about-section p {
+    margin-bottom: 15px;
+  }
+
+  div#olympic-container div#right-side div#about-section a#profile-read-more {
+    color: cadetblue;
+    margin-top: 15px;
+  }
+
+  div#olympic-container div#right-side div#about-section div#links-container a:link {
+    color: #46b9ff;
+  }
+
+  div#olympic-container div#right-side div#about-section div#links-container a:hover {
+    text-decoration: underline;
+  }
+
+  div#olympic-container div#right-side div#medals-section,
+  div#olympic-container div#right-side div#events-section {
+    display: none;
+  }
+
+  div#olympic-container div#profiles-container {
+    width: 100%;
+    white-space: nowrap;
+  }
+
+  div#olympic-container div#profiles-container div.profile-preview {
+    display: inline-block;
+    width: 20.5%;
+    height: 125px;
+    background-image: url("http://via.placeholder.com/350x350");
+    background-size: cover;
+    background-position: center center;
+    cursor: pointer;
+    margin-left: -4px;
+    margin-bottom: -4px;
+  }
+
+  div#olympic-container div#profiles-container div.profile-preview:hover {
+    opacity: 0.5;
+  }
+
+  @media screen and (max-device-width: 500px),
+  screen and (max-width: 550px) {
     div#olympic-container div#left-side,
     div#olympic-container div#right-side {
-      width: 100%; }
+      width: 100%;
+    }
     div#olympic-container div#left-side div#menu-container {
-      white-space: nowrap; }
-      div#olympic-container div#left-side div#menu-container div.menu-item {
-        font-size: 2em;
-        width: 33%;
-        display: inline-block;
-        text-align: center; }
-        div#olympic-container div#left-side div#menu-container div.menu-item i {
-          margin: 0px auto;
-          display: block; }
+      white-space: nowrap;
+    }
+    div#olympic-container div#left-side div#menu-container div.menu-item {
+      font-size: 1em;
+      width: 33%;
+      display: inline-block;
+      text-align: center;
+    }
+    div#olympic-container div#left-side div#menu-container div.menu-item i {
+      margin: 0px auto;
+      display: block;
+    }
     div#olympic-container div#right-side {
-      padding-bottom: 50px; }
-      div#olympic-container div#right-side div#about-section,
-      div#olympic-container div#right-side div#medals-section,
-      div#olympic-container div#right-side div#events-section {
-        font-size: 2em;
-        box-sizing: border-box; }
-        div#olympic-container div#right-side div#about-section h1,
-        div#olympic-container div#right-side div#medals-section h1,
-        div#olympic-container div#right-side div#events-section h1 {
-          margin-top: 25px; }
-      div#olympic-container div#right-side div#events-section div#events-container div.olympic-date {
-        width: 75px;
-        height: 75px; }
-        div#olympic-container div#right-side div#events-section div#events-container div.olympic-date span.month {
-          margin-top: 2px; }
+      padding-bottom: 50px;
+    }
+    div#olympic-container div#right-side div#about-section,
+    div#olympic-container div#right-side div#medals-section,
+    div#olympic-container div#right-side div#events-section {
+      font-size: 1em;
+      box-sizing: border-box;
+    }
+    div#olympic-container div#right-side div#about-section h1,
+    div#olympic-container div#right-side div#medals-section h1,
+    div#olympic-container div#right-side div#events-section h1 {
+      margin-top: 25px;
+    }
+    div#olympic-container div#right-side div#events-section div#events-container div.olympic-date {
+      width: 75px;
+      height: 75px;
+    }
+    div#olympic-container div#right-side div#events-section div#events-container div.olympic-date span.month {
+      margin-top: 2px;
+    }
     div#olympic-container div#profiles-container div.profile-preview:hover {
-      opacity: 1; } }
-  </style>
+      opacity: 1;
+    }
+  }
+
+  /*# sourceMappingURL=style.css.map */
+</style>
 
 <div id="olympic-container">
   <div id="left-side">
@@ -163,7 +224,7 @@
     <div id="events-section">
       <h1>Events</h1>
       <div id="events-container"></div>
-      <span id="event-info">Click an event to see info!</span>
+      <span id="event-info">Click an event to see info</span>
     </div>
   </div>
   <div id="profiles-container">
@@ -558,27 +619,27 @@
         }
       ],
       events: {
-        "216": "(2/15/18) Skating: Men's single skating short program at 6PM",
-        "2161": "(2/16/18) Skating: Men's single skating short program 6PM",
-        "217": "(2/14/18) Running: Women's 1,000 meters at 3AM",
-        "218": "(2/11/18) Skiing: Women's ski jumping at 4:35AM",
-        "219": "(2/10/18) Luge: Men's singles luge 3:10AM",
-        "2191": "(2/11/18) Luge: Men's singles luge 4AM",
+        "216": "(2/15/18) Skating: Men's single skating short program 6PM (MST)",
+        "2161": "(2/16/18) Skating: Men's single skating short program 6PM (MST)",
+        "217": "(2/14/18) Running: Women's 1,000 meters at 3AM (MST)",
+        "218": "(2/11/18) Skiing: Women's ski jumping at 4:35AM (MST)",
+        "219": "(2/10/18) Luge: Men's singles luge 3:10AM (MST)",
+        "2191": "(2/11/18) Luge: Men's singles luge 4AM (MST)",
         "220": "(2/20/18) N/A: Events TBD",
-        "221": "(2/15/18) Aerials: Women's aerials qualfication 4AM",
-        "2211": "(2/16/18) Aerials: Women's aerials finals 4AM",
-        "222": "(2/23/18) Bobsled: 4-man bobsled 5:30PM",
-        "2221": "(2/24/18) Bobsled: 4-man bobsled 5:30PM",
-        "223": "(2/16/18) Snowboard: Women's snowboard cross 6PM",
-        "224": "(2/17/18) Slalom: Men's giant slalom 6:15PM",
-        "225": "(2/11/18) Slalom: Women's giant slalom 6:15PM",
-        "226": "(2/10/18) Downhill: Men's downhill 7PM",
-        "2261": "(2/12/18) Alpine: Men's alpine combined 7:30PM",
-        "227": "(2/16/18) Skiing: Women's ski slopestyle 6PM",
-        "228": "(2/8/18) N/A: Men's normal hill 5:30AM",
-        "2281": "(2/10/18) N/A: Men's normal hill 5:30PM",
-        "2282": "(2/16/18) N/A: Men's large hill 4:15AM",
-        "2283": "(2/17/18) N/A: Men's large hill 4:15AM"
+        "221": "(2/15/18) Aerials: Women's aerials qualfication 4AM (MST)",
+        "2211": "(2/16/18) Aerials: Women's aerials finals 4AM (MST)",
+        "222": "(2/23/18) Bobsled: 4-man bobsled 5:30PM (MST)",
+        "2221": "(2/24/18) Bobsled: 4-man bobsled 5:30PM (MST)",
+        "223": "(2/16/18) Snowboard: Women's snowboard cross 6PM (MST)",
+        "224": "(2/17/18) Slalom: Men's giant slalom 6:15PM (MST)",
+        "225": "(2/11/18) Slalom: Women's giant slalom 6:15PM (MST)",
+        "226": "(2/10/18) Downhill: Men's downhill 7PM (MST)",
+        "2261": "(2/12/18) Alpine: Men's alpine combined 7:30PM (MST)",
+        "227": "(2/16/18) Skiing: Women's ski slopestyle 6PM (MST)",
+        "228": "(2/8/18) N/A: Men's normal hill 5:30AM (MST)",
+        "2281": "(2/10/18) N/A: Men's normal hill 5:30PM (MST)",
+        "2282": "(2/16/18) N/A: Men's large hill 4:15AM (MST)",
+        "2283": "(2/17/18) N/A: Men's large hill 4:15AM (MST)"
       }
     }
     var current = 0;
@@ -621,7 +682,7 @@
           }
         }
       } else {
-        document.getElementById('event-info').innerHTML = 'No events have been scheduled!';
+        document.getElementById('event-info').innerHTML = 'No events have been scheduled';
       }
     }
 
@@ -637,7 +698,7 @@
           }
         }
       } else {
-        container.innerHTML += 'No medals were found!';
+        container.innerHTML += 'None';
       }
     }
 
@@ -645,26 +706,24 @@
       var container = document.getElementById('links-container');
       container.innerHTML = '';
       if (athlete['link-1']) {
-        container.innerHTML += '<b>Read More:</b></br />';
+        var html = '<ul>';
         for (var x = 1; x <= 5; x++) {
           var link = athlete['link-' + x];
           var title = athlete['link-' + x + '-title'];
           if (link) {
-            if (title.length > 45) {
-              title = title.substring(0, 45);
-              title += '...';
-            }
-            container.innerHTML += '<a href="' + link + '">' + title + '</a><br />';
+            html += '<li><a href="' + link + '">' + title + '</a></li>';
           }
         }
-      };
+        html += '</ul>';
+        container.innerHTML = html;
+      }
     }
 
     function loadProfile() {
       updateText('profile-name', athlete.name);
       updateText('profile-about', athlete.about);
-      updateText('profile-hometown', athlete.hometown + ', UT (Age: ' + athlete.age + ')');
-      document.getElementById('event-info').innerHTML = 'Click an event to see info!';
+      updateText('profile-hometown', athlete.hometown + ' (Age: ' + athlete.age + ')');
+      document.getElementById('event-info').innerHTML = 'Click an event to see info';
       document.getElementById('profile-picture').style.backgroundImage = 'url(' + athlete.photo + ')';
       for (var x = 0; x < 5; x++) {
         var num = ((x + 1) + current) % data.athletes.length;
