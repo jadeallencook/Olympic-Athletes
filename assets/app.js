@@ -3,10 +3,12 @@
   var athlete = data.athletes[current];
   var eventNum = 5;
   var medalsNum = 5;
+
   function updateText(id, text) {
     var elem = document.getElementById(id);
     elem.innerHTML = text;
   }
+
   function loadEvents() {
     var container = document.getElementById('events-container');
     container.innerHTML = '';
@@ -28,7 +30,7 @@
       for (var x = 1; x <= 5; x++) {
         var container = document.getElementById('event-' + x);
         if (container) {
-          container.onclick = function() {
+          container.onclick = function () {
             var event = this.getAttribute('data-desc');
             event = '<b>' + event.replace(':', ' - </b> ')
             document.getElementById('event-info').innerHTML = event;
@@ -39,6 +41,7 @@
       document.getElementById('event-info').innerHTML = 'No events have been scheduled!';
     }
   }
+
   function loadMedals() {
     var container = document.getElementById('medals-container');
     container.innerHTML = '';
@@ -54,6 +57,7 @@
       container.innerHTML += 'No medals were found!';
     }
   }
+
   function loadLinks() {
     var container = document.getElementById('links-container');
     container.innerHTML = '';
@@ -62,16 +66,17 @@
       for (var x = 1; x <= 5; x++) {
         var link = athlete['link-' + x];
         var title = athlete['link-' + x + '-title'];
-        if(title.length > 45) {
-          title = title.substring(0, 45);
-          title += '...';
-        }
         if (link) {
-          container.innerHTML += '<a href="' + link + '">' + title +'</a><br />';
+          if (title.length > 45) {
+            title = title.substring(0, 45);
+            title += '...';
+          }
+          container.innerHTML += '<a href="' + link + '">' + title + '</a><br />';
         }
       }
     };
   }
+
   function loadProfile() {
     updateText('profile-name', athlete.name);
     updateText('profile-about', athlete.about);
@@ -88,6 +93,7 @@
     loadEvents();
     loadMedals();
   }
+
   function router(selected) {
     var sections = ['about', 'medals', 'events'];
     for (var x = 0, max = sections.length; x < max; x++) {
@@ -99,6 +105,7 @@
     selected.classList.add('current-menu-item');
     document.getElementById(selected.id.replace('-btn', '') + '-section').style.display = 'block';
   }
+
   function resize() {
     var height = document.getElementsByClassName('profile-preview')[0].offsetWidth + 'px';;
     for (var x = 0; x < 5; x++) {
@@ -113,7 +120,7 @@
     }
   }
   for (var x = 0; x < 5; x++) {
-    document.getElementsByClassName('profile-preview')[x].onclick = function() {
+    document.getElementsByClassName('profile-preview')[x].onclick = function () {
       var num = parseInt(this.getAttribute('data-val'));
       current = num;
       athlete = data.athletes[num];
