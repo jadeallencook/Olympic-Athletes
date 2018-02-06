@@ -69,7 +69,7 @@
         var link = athlete['link-' + x];
         var title = athlete['link-' + x + '-title'];
         if (link) {
-          container.innerHTML  += '<a href="' + link + '">' + title + '</a>';
+          container.innerHTML += '<a target="_blank" href="' + link + '">' + title + '</a>';
         }
       }
     }
@@ -81,12 +81,6 @@
     updateText('profile-hometown', athlete.hometown + ' (Age: ' + athlete.age + ')');
     document.getElementById('event-info').innerHTML = 'Click an event to see info';
     document.getElementById('profile-picture').style.backgroundImage = 'url(' + athlete.photo + ')';
-    for (var x = 0; x < 5; x++) {
-      var num = ((x + 1) + current) % data.athletes.length;
-      var preview = document.getElementsByClassName('profile-preview')[x];
-      preview.style.backgroundImage = 'url(' + data.athletes[num].photo + ')';
-      preview.setAttribute('data-val', num);
-    }
     loadLinks();
     loadEvents();
     loadMedals();
@@ -106,7 +100,7 @@
 
   function resize() {
     var previewHeight = document.getElementsByClassName('profile-preview')[0].offsetWidth + 'px';
-    for (var x = 0; x < 5; x++) {
+    for (var x = 0; x < 14; x++) {
       document.getElementsByClassName('profile-preview')[x].style.height = previewHeight;
     }
     previewHeight = document.getElementById('profile-picture').offsetWidth + 'px';
@@ -115,7 +109,7 @@
     if (window.innerWidth <= 550) {
       document.getElementById('right-side').style.height = 'auto';
     } else {
-      document.getElementById('right-side').style.height = leftSideHeight; 
+      document.getElementById('right-side').style.height = leftSideHeight;
     }
   }
   for (var x = 0; x < 3; x++) {
@@ -126,7 +120,7 @@
       }
     }
   }
-  for (var x = 0; x < 5; x++) {
+  for (var x = 0; x < 14; x++) {
     document.getElementsByClassName('profile-preview')[x].onclick = function () {
       var num = parseInt(this.getAttribute('data-val'));
       current = num;
@@ -136,6 +130,10 @@
         ga('send', 'event', 'Olympics Interactive', 'Athlete', this.getAttribute('data-val'));
       }
     }
+    var num = ((x + 1) + current) % data.athletes.length;
+    var preview = document.getElementsByClassName('profile-preview')[x];
+    preview.style.backgroundImage = 'url(' + data.athletes[num].photo + ')';
+    preview.setAttribute('data-val', num);
   }
   window.onresize = resize;
   loadProfile();

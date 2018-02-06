@@ -1,17 +1,12 @@
-html,
-body {
-  margin: 0px;
-  height: 0px;
-}
-
 // main container
 div#olympic-container {
   overflow-y: scroll;
   overflow-x: hidden;
   width: 100%;
+  max-width: 750px;
   text-align: left;
   background-color: #eee;
-  margin: 25px 0px;
+  margin: 25px auto;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -118,17 +113,16 @@ div#olympic-container {
   } // profiles
   div#profiles-container {
     width: 100%;
-    white-space: nowrap;
     div.profile-preview {
       display: inline-block;
-      width: 20.5%;
+      width: 20.08%;
       height: 125px;
       background-image: url('http://via.placeholder.com/350x350');
       background-size: cover;
       background-position: center center;
       cursor: pointer;
       margin-left: -4px;
-      margin-bottom: -4px;
+      margin-bottom: -5px;
     }
     div.profile-preview:hover {
       opacity: 0.5;

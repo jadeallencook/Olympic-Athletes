@@ -5,9 +5,10 @@
     overflow-y: scroll;
     overflow-x: hidden;
     width: 100%;
+    max-width: 750px;
     text-align: left;
     background-color: #eee;
-    margin: 25px 0px;
+    margin: 25px auto;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -126,19 +127,18 @@
 
   div#olympic-container div#profiles-container {
     width: 100%;
-    white-space: nowrap;
   }
 
   div#olympic-container div#profiles-container div.profile-preview {
     display: inline-block;
-    width: 20.5%;
+    width: 20.08%;
     height: 125px;
     background-image: url("http://via.placeholder.com/350x350");
     background-size: cover;
     background-position: center center;
     cursor: pointer;
     margin-left: -4px;
-    margin-bottom: -4px;
+    margin-bottom: -5px;
   }
 
   div#olympic-container div#profiles-container div.profile-preview:hover {
@@ -190,8 +190,6 @@
       opacity: 1;
     }
   }
-
-  /*# sourceMappingURL=style.css.map */
 </style>
 
 <div id="olympic-container">
@@ -235,6 +233,15 @@
     <div data-val="3" class="profile-preview"></div>
     <div data-val="4" class="profile-preview"></div>
     <div data-val="5" class="profile-preview"></div>
+    <div data-val="6" class="profile-preview"></div>
+    <div data-val="7" class="profile-preview"></div>
+    <div data-val="8" class="profile-preview"></div>
+    <div data-val="9" class="profile-preview"></div>
+    <div data-val="10" class="profile-preview"></div>
+    <div data-val="11" class="profile-preview"></div>
+    <div data-val="12" class="profile-preview"></div>
+    <div data-val="13" class="profile-preview"></div>
+    <div data-val="14" class="profile-preview"></div>
   </div>
 </div>
 
@@ -715,7 +722,7 @@
           var link = athlete['link-' + x];
           var title = athlete['link-' + x + '-title'];
           if (link) {
-            container.innerHTML += '<a href="' + link + '">' + title + '</a>';
+            container.innerHTML += '<a target="_blank" href="' + link + '">' + title + '</a>';
           }
         }
       }
@@ -727,12 +734,6 @@
       updateText('profile-hometown', athlete.hometown + ' (Age: ' + athlete.age + ')');
       document.getElementById('event-info').innerHTML = 'Click an event to see info';
       document.getElementById('profile-picture').style.backgroundImage = 'url(' + athlete.photo + ')';
-      for (var x = 0; x < 5; x++) {
-        var num = ((x + 1) + current) % data.athletes.length;
-        var preview = document.getElementsByClassName('profile-preview')[x];
-        preview.style.backgroundImage = 'url(' + data.athletes[num].photo + ')';
-        preview.setAttribute('data-val', num);
-      }
       loadLinks();
       loadEvents();
       loadMedals();
@@ -752,7 +753,7 @@
 
     function resize() {
       var previewHeight = document.getElementsByClassName('profile-preview')[0].offsetWidth + 'px';
-      for (var x = 0; x < 5; x++) {
+      for (var x = 0; x < 14; x++) {
         document.getElementsByClassName('profile-preview')[x].style.height = previewHeight;
       }
       previewHeight = document.getElementById('profile-picture').offsetWidth + 'px';
@@ -772,7 +773,7 @@
         }
       }
     }
-    for (var x = 0; x < 5; x++) {
+    for (var x = 0; x < 14; x++) {
       document.getElementsByClassName('profile-preview')[x].onclick = function () {
         var num = parseInt(this.getAttribute('data-val'));
         current = num;
@@ -782,6 +783,10 @@
           ga('send', 'event', 'Olympics Interactive', 'Athlete', this.getAttribute('data-val'));
         }
       }
+      var num = ((x + 1) + current) % data.athletes.length;
+      var preview = document.getElementsByClassName('profile-preview')[x];
+      preview.style.backgroundImage = 'url(' + data.athletes[num].photo + ')';
+      preview.setAttribute('data-val', num);
     }
     window.onresize = resize;
     loadProfile();
