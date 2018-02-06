@@ -34,6 +34,9 @@
             var event = this.getAttribute('data-desc');
             event = '<b>' + event.replace(':', ' - </b> ')
             document.getElementById('event-info').innerHTML = event;
+            if ('ga' in window) {
+              ga('send', 'event', 'Olympics Interactive', 'Event', this.getAttribute('data-desc'));
+            }
           }
         }
       }
@@ -62,16 +65,13 @@
     var container = document.getElementById('links-container');
     container.innerHTML = '';
     if (athlete['link-1']) {
-      var html = '<ul>';
       for (var x = 1; x <= 5; x++) {
         var link = athlete['link-' + x];
         var title = athlete['link-' + x + '-title'];
         if (link) {
-          html += '<li><a href="' + link + '">' + title + '</a></li>';
+          container.innerHTML  += '<a href="' + link + '">' + title + '</a>';
         }
       }
-      html += '</ul>';
-      container.innerHTML = html;
     }
   }
 
@@ -105,16 +105,25 @@
   }
 
   function resize() {
-    var height = document.getElementsByClassName('profile-preview')[0].offsetWidth + 'px';;
+    var previewHeight = document.getElementsByClassName('profile-preview')[0].offsetWidth + 'px';
     for (var x = 0; x < 5; x++) {
-      document.getElementsByClassName('profile-preview')[x].style.height = height;
+      document.getElementsByClassName('profile-preview')[x].style.height = previewHeight;
     }
-    height = document.getElementById('profile-picture').offsetWidth + 'px';
-    document.getElementById('profile-picture').style.height = height;
+    previewHeight = document.getElementById('profile-picture').offsetWidth + 'px';
+    document.getElementById('profile-picture').style.height = previewHeight;
+    var leftSideHeight = document.getElementById('left-side').offsetHeight + 'px';
+    if (window.innerWidth <= 550) {
+      document.getElementById('right-side').style.height = 'auto';
+    } else {
+      document.getElementById('right-side').style.height = leftSideHeight; 
+    }
   }
   for (var x = 0; x < 3; x++) {
     document.getElementsByClassName('menu-item')[x].onclick = function () {
       router(this);
+      if ('ga' in window) {
+        ga('send', 'event', 'Olympics Interactive', 'Menu Item', this.id);
+      }
     }
   }
   for (var x = 0; x < 5; x++) {
@@ -123,9 +132,12 @@
       current = num;
       athlete = data.athletes[num];
       loadProfile();
+      if ('ga' in window) {
+        ga('send', 'event', 'Olympics Interactive', 'Athlete', this.getAttribute('data-val'));
+      }
     }
   }
   window.onresize = resize;
-  resize();
   loadProfile();
+  resize();
 })();

@@ -44,7 +44,8 @@ div#olympic-container {
     width: 69%;
     display: inline-block;
     box-sizing: border-box;
-    padding: 15px; }
+    padding: 15px;
+    overflow-y: scroll; }
     div#olympic-container div#right-side div#about-section h1,
     div#olympic-container div#right-side div#medals-section h1,
     div#olympic-container div#right-side div#events-section h1 {
@@ -102,7 +103,8 @@ div#olympic-container {
 @media screen and (max-device-width: 500px), screen and (max-width: 550px) {
   div#olympic-container div#left-side,
   div#olympic-container div#right-side {
-    width: 100%; }
+    width: 100%;
+    overflow-y: auto; }
   div#olympic-container div#left-side div#menu-container {
     white-space: nowrap; }
     div#olympic-container div#left-side div#menu-container div.menu-item {

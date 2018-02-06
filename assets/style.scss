@@ -54,6 +54,7 @@ div#olympic-container {
     display: inline-block;
     box-sizing: border-box;
     padding: 15px;
+    overflow-y: scroll;
     div#about-section,
     div#medals-section,
     div#events-section {
@@ -141,6 +142,7 @@ screen and (max-width: 550px) {
     div#left-side,
     div#right-side {
       width: 100%;
+      overflow-y: auto;
     }
     div#left-side {
       div#menu-container {
